@@ -40,14 +40,74 @@ if (isset($_SESSION["user"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Category</title>
+    <style> 
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(07, 45, 74);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ensure the full height of the viewport is covered */
+    margin: 0;
+}
+form{
+    background-color: green;
+    border: 1px solid black;
+    padding: 40px;
+   
+}
+
+.style1 {
+    color: lightgoldenrodyellow;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center; /* Center the text within the container */
+}
+
+#submit {
+    padding: 10px;
+    border: 1px solid lightsalmon;
+    background-color: lightcyan;
+    
+    margin: 20px; margin-left: 215px;
+    color: limegreen;
+    font-size: 30px;
+    font-weight: bolder;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+input{
+    margin: 20px;
+}
+#cat_name,#description  {
+    height: 45px;
+    width: 250px;
+    border: 1px solid lightsalmon;
+    font-size: 30px;       
+    font-weight: bolder;
+    color: limegreen;
+  
+    box-sizing: border-box;
+}
+.y{
+    border-radius: 20px;
+}
+#description{
+    margin-left: 50px;
+}
+#cat_name{
+    margin-left:25px ;
+}
+
+    </style>
 </head>
 <body>
-    <form  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        Category Name:<input type="text" name="cat_name" id="cat_name">
+    <form  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="y">
+        Category Name:<input type="text" name="cat_name" id="cat_name"class="y">
         <br>
-        Description:
-        <input type="text" name="description" id="description">
-        <input type="submit" name="submit" id="submit">
+        Description: <input type="text" name="description" id="description" class="y">
+        <br>
+        <input type="submit" name="submit" id="submit" class="y">
     </form>
 </body>
 </html>

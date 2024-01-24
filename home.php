@@ -2,7 +2,8 @@
 session_start();
 
 if (!isset($_SESSION["user"])) {
-    header("Location: home.php");
+    header("Location: login.php");
+    die("Please login");
 }
 
 if (isset($_SESSION["user"])) {
@@ -23,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header('Location: discussion.php');
     exit();
 }
+$name=$_SESSION["user"];
 ?>
 
 <!DOCTYPE html>
@@ -33,15 +35,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Options</title>
     <link rel="stylesheet" href="homestyle.css">
+    
 </head>
 
 <body>
-    <?php
-    $realUsername = "Anush";
-    ?>
-
+  
     <div class="username">Hey,
-        <?php echo $realUsername; ?>
+        <?php echo $name; ?>
     </div>
 
     <div class="container">

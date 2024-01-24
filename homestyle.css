@@ -1,6 +1,6 @@
 
 body {
-    background-color: white;
+    background-color: rgb(123, 215, 57);
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: flex;
 
@@ -8,7 +8,12 @@ body {
     height: 100vh;
     text-align: center;
 }
-
+.username{
+    margin-top: 10px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    padding:10px;
+}
 h1 {
     color: black;
 }
